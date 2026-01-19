@@ -7,19 +7,23 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="container">
+    <h1>Salle Hemmiche Bina</h1>
 
-<h1>Salle Hemmiche Bina</h1>
+    <div class="controls">
+      <select id="sport">
+        <option value="KARATE">🥋 Karaté</option>
+        <option value="GYM">🤸 Gymnastique</option>
+      </select>
 
-<select id="sport">
-  <option value="KARATE">Karaté</option>
-  <option value="GYM">Gymnastique</option>
-</select>
+      <input id="nom" placeholder="Nom de l'athlète" />
+      <button class="add" onclick="addAthlete()">➕ Ajouter</button>
+    </div>
 
-<input id="nom" placeholder="Nom de l'athlète">
-<button onclick="addAthlete()">Ajouter</button>
+    <table id="table"></table>
+  </div>
 
-<table id="table"></table>
-
-<script src="app.js"></script>
+  <script src="app.js"></script>
 </body>
+
 </html>
