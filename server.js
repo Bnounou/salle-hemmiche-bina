@@ -14,7 +14,14 @@ app.get("/api/athletes", async (req, res) => {
   const sport = req.query.sport;
   const athletes = await prisma.athlete.findMany({
     where: { sport },
-    include: { paiements: true }
+    include: {
+  paiements: {
+    orderBy: {
+      mois: "asc"
+    }
+  }
+}
+
   });
   res.json(athletes);
 });
